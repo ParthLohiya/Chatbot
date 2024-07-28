@@ -4,29 +4,20 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-html {
-  height: 100dvh;
-  width: 100dvw;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: #243a49;
   color: #111;
-}
-
-.navbar {
   display: flex;
-  position: relative;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #172b3a;
-  color: #fff;
-}
-
-.navbar-left {
-  flex-grow: 1;
 }
 
 h1 {
@@ -35,103 +26,65 @@ h1 {
   user-select: none;
 }
 
-.navbar-right {
-  display: flex;
-}
-
-.navbar-links {
-  margin-right: 1rem;
-}
-
-.navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  list-style: none;
-  padding: 5px;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-}
-
-.navbar-links li:hover {
-  background-color: #34495e;
-}
-
-.navbar-links li a:hover {
-  color: #abb2b9;
-}
-
-.main-section {
-  padding: 50px 0;
-}
-
 #cb-text {
   text-align: center;
   padding: 10px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0;
   background-color: #2b6c6c;
-  color: #111;
+  color: #fff;
   font-weight: 700;
-  position: sticky;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
 
 .chat-container {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 82.5dvh;
   background-color: #363642;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow-y: scroll;
-  height: 82.5dvh;
-  color: #bdbdbd;
+  overflow: hidden;
 }
 
+
 .chat-box {
-  height: 90%;
   overflow-y: auto;
+  flex: 1
+  ;
   padding: 20px;
+  background-color: #2b2b2b;
+  border-top: 1px solid #444;
 }
 
 .chat-ctrls {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+  padding: 10px;
+  background-color: #2b2b2b;
+  border-top: 1px solid #444;
   position: absolute;
   bottom: 0px;
-  width: 49%;
-  padding: 10px;
-  background-color: #363642;
-  border-radius: 5px;
-  gap: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 #userInput {
-  flex-grow: 1;
+  flex: 1;
   padding: 8px;
   border: none;
   border-radius: 3px;
   background-color: #2b2b2b;
   color: #fff;
+  border: 2px solid #5d5959;
 }
 
 #sendButton {
-  padding: 8px 20px;
+  padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -144,27 +97,20 @@ h1 {
   background-color: #0056b3;
 }
 
-.bot {
+.bot, .user {
   background-color: #545b4d;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
-  padding-bottom: 30px;
-  display: flex;
-  align-items: center;
+  color: #fff;
 }
 
 .user {
   background-color: #506863;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
   text-align: right;
 }
 
 .bot {
-  padding: 10px;
-  padding-bottom: 30px;
   position: relative;
 }
 
@@ -172,11 +118,16 @@ h1 {
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 10px;
+  font-size: 12px;
   background-color: #605c5c;
-  border-radius: 10%;
-  border: 1px solid black;
+  border-radius: 5px;
+  border: 1px solid #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, font-size 0.3s ease;
 }
+
 .bot button:hover {
-  font-size: 15px;
+  background-color: #494848;
+  font-size: 14px;
 }
